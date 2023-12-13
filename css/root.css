@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Quicksand:wght@300;400;500;700&display=swap');
+
+
+:root {
+    --color-dark-blue: #1A535C;
+    --color-light-blue: #4ECDC4;
+    --color-cream: #F7FFF7;
+    --color-yellow: #FFF1A8;
+    --color-pink: #FF6B6B;
+   
+    --font-mobile-title-1: 700 2.375rem 'Quicksand', sans-serif;
+    --font-mobile-title-2: 700 2rem 'Quicksand', sans-serif;
+    --font-mobile-fact-text: 500 1.625rem 'Quicksand', sans-serif;
+    --font-mobile-button-text: 700 1.25em 'Quicksand', sans-serif;
+    --font-mobile-footer-text: 400 .938rem 'Quicksand', sans-serif;
+    
+    --font-desktop-title-1: 700 2.5rem 'Quicksand', sans-serif;
+    --font-desktop-title-2: 700 2.375rem 'Quicksand', sans-serif;
+    --font-desktop-fact-text: 500 1.8rem 'Quicksand', sans-serif;
+    --font-desktop-button-text: 700 1.5rem 'Quicksand', sans-serif;
+    --font-desktop-footer-text: 400 1rem 'Quicksand', sans-serif;
+}
+
+*{
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
