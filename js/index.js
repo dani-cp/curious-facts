@@ -4,10 +4,10 @@
   const data = await response.json()
   return data.text 
 }*/
-
+const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en'
 async function get_data() {
     try {
-        const response = await fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en', {
+        const response = await fetch(url, {
         method: 'GET',
         headers: {
         'Accept': 'application/json'
