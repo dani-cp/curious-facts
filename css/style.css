@@ -5,23 +5,24 @@ body {
   padding: 0;
   height: 100vh;
   background-color: var(--color_yellow);
-  display: flex;
 }
 
-.main {
+.main_mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding-top: 20%;
 }
 
 .card_facts {
-  border: 2px solid var(--color_dark_blue);
+  border: 4px solid var(--color_dark_blue);
   border-radius: 10px;
-  width: 400px;
+  width: 70%;
   padding: 20px;
   background-color: var(--color_cream);
   color: var(--color_dark_blue);
-  font-size: var(--font_mobile_fact_text);
+  font: var(--font_mobile_fact_text);
   line-height: 1.5;
   text-align: center;
 }
@@ -29,19 +30,96 @@ body {
 .buttons_container {
   display: flex;
   justify-content: space-between;
-  width: 300px;
-  margin-top: 20px;
+  width: 70%;
+  margin-top: 10%;
 }
 
 .button {
   cursor: pointer;
   border-radius: 7px;
-  padding: 13px 15px;
+  padding: 5% 7%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 10%;
 }
 
-/* #button_new_fact {
+#button_new_fact {
+  background-color: var(--color_dark_blue);
+  color: var(--color_cream);
+  border: none;
+  width: 60%;
+  font: var(--font_mobile_button_text);
+  display: flex;
+  justify-content: center;
+}
 
-} */
+#button_favorites_mobile {
+  background-color: var(--color_pink);
+  color: var(--color_cream);
+  border: none;
+  width: 35%;
+  font: var(--font_mobile_button_text);
+}
 
-/* media query to hide button_favorites-desktop */
+.heart {
+  font-size: x-large;
+}
 
+.main_desktop {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+
+  .main_mobile {
+    display: none;
+  }
+  
+  .main_desktop {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    padding-left: 10%;
+  }
+
+  .card_facts {
+    width: 70%;
+    padding: 50px;
+    font: var(--font_desktop_fact_text);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .buttons_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 20%;
+    margin-top: 0;
+    gap: 10%;
+  }
+
+  #button_favorites_desktop {
+    display: flex;
+    background-color: var(--color_pink);
+    color: var(--color_cream);
+    border: none;
+    width: 55%;
+    font: var(--font_desktop_button_text);
+    padding-left: 11%;
+  }
+
+  #button_new_fact {
+    width: 55%;
+    font: var(--font_desktop_button_text);
+  }
+
+  #button_favorites_mobile {
+    display: none;
+  }
+}
