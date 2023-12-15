@@ -78,7 +78,7 @@ header {
   justify-content: center;
 }
 
-#button_favorites {
+#button_add_favorite {
   background-color: var(--color_pink);
   color: var(--color_cream);
   border: none;
@@ -169,7 +169,7 @@ footer p {
     border: none;
   }
 
-  #button_favorites {
+  #button_add_favorite {
     display: flex;
     background-color: var(--color_pink);
     color: var(--color_cream);
