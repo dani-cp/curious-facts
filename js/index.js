@@ -1,28 +1,19 @@
-//it also kinda works, Alex told me to use then-catch instead of try-catch
-/*async function get_data() {
-  const response = await fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en',)
-  const data = await response.json()
-  return data.text 
-}*/
 const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en'
-async function get_data() {
+const get_data = async () => {
     try {
         const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-        'Accept': 'application/json'
-        }
+            method: 'GET',
+            headers: { 'Accept': 'application/json' }
         });
         const data = await response.json();
         return data.text;
         
     } catch (error) {
-        console.error('There was a problem fetching the data:', error);
-        return null;
+        throw error
     }
 }
 
-async function new_fact() {
+const new_fact = async () => {
     const fact = await get_data()
     document.querySelector(".card_facts_text").innerHTML = fact
 }
