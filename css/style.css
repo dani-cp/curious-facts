@@ -12,7 +12,15 @@ body {
 
 header {
   background-color: var(--color_light_blue);
-  padding-top: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart_favorites_section {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 1rem;
 }
 
 .page_title {
