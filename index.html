@@ -6,12 +6,18 @@
     <title>Useless Utopia</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+        <style>
+        #home {
+            display: none;
+        }
+    </style>
 </head>
 <body>
   <header>
     <h1 class="page_title">
       Useless Utopia
     </h1>
+    <button id="button_favorites"> <img src="./assets/logo.png" alt="heart logo" class="page_logo" />  
   </header>
     <main class="main">
       <article class="card_facts">
@@ -21,9 +27,17 @@
       </article>
       <div class="buttons_container">
         <button id="button_new_fact" class="button">Next Fact <iconify-icon icon="cil:chevron-right"></iconify-icon></i></button>
-        <button id="button_add_favorite"class="button"><p id="button_favorites_desktop_text">Favorite</p></iconify-icon><iconify-icon class="heart" icon="mdi:heart-outline"></iconify-icon><p id="button_favorites_mobile_text"> + 1</p></button>
+        <button id="button_add_favorite" class="button"> <p id="button_favorites_mobile_text"> + 1</p> <p id="button_favorites_desktop_text">Favorite</p></  iconify-icon><iconify-icon class="heart" icon="mdi:heart-outline"></iconify-icon>         
+        </button>
       </div>
+    <div>
     </main>
+    
+    <div>
+      <ul id="list_favorites"></ul>
+      <button id="home">home</button>
+    </div>
+
     <footer>
       <p>
         © Copyright 2023 Useless Utopia. All rights reserved
