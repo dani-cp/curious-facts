@@ -1,4 +1,3 @@
-// Array to store favorite facts
 let favorites = [];
 
 const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en';
@@ -27,19 +26,24 @@ const new_fact = async () => {
 };
 
 const add_favorite = async () => {
-  try {
-    const displayed_fact = document.querySelector(".card_facts_text").innerHTML;
-    if (displayed_fact) {
-      favorites.push(displayed_fact);
-      console.log("Fact added to favorites:", displayed_fact);
-      alert("Added to favorites");
-    } else {
-      console.error("Error adding favorite: No displayed fact available");
+    try {
+        const displayed_fact = document.querySelector(".card_facts_text").innerHTML;
+        if (displayed_fact) {
+            if (!favorites.includes(displayed_fact)) {
+                favorites.push(displayed_fact);
+                console.log("Fact added to favorites:", displayed_fact);
+                alert("Added to favorites");
+            } else {
+                alert("This fact is already in favorites.");
+            }
+        } else {
+            console.error("Error adding favorite: No displayed fact available");
+        }
+    } catch (error) {
+        console.error("Error adding favorite:", error);
     }
-  } catch (error) {
-    console.error("Error adding favorite:", error);
-  }
 };
+
 
 const list_favorites = () => {
   try {
@@ -58,7 +62,7 @@ const list_favorites = () => {
     }
   } catch (error) {
     console.error("Error listing favorites:", error);
-  } document.getElementById("home").style.display = "block"
+  } document.getElementById("button_home").style.display = "block"
 };
 
 
@@ -70,5 +74,5 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("button_new_fact").addEventListener("click", new_fact);
   document.getElementById("button_add_favorite").addEventListener("click", add_favorite);
   document.getElementById("button_favorites").addEventListener("click", list_favorites);
-  document.getElementById("home").addEventListener("click", refresh);
+  document.getElementById("button_home").addEventListener("click", refresh);
 });

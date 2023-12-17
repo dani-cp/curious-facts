@@ -10,14 +10,16 @@
   --font_mobile_title_1: 700 2.375rem "Quicksand", sans-serif;
   --font_mobile_title_2: 700 2rem "Quicksand", sans-serif;
   --font_mobile_fact_text: 500 1.25rem "Quicksand", sans-serif;
-  --font_mobile_button_text: 700 1.25em "Quicksand", sans-serif;
+  --font_mobile_button_text: 700 1.25rem "Quicksand", sans-serif;
   --font_mobile_footer_text: 400 0.938rem "Quicksand", sans-serif;
+  --font_mobile_toast: 700 1rem "Quicksand", sans-serif;
 
   --font_desktop_title_1: 700 2.5rem "Quicksand", sans-serif;
   --font_desktop_title_2: 700 2.375rem "Quicksand", sans-serif;
   --font_desktop_fact_text: 500 1.8rem "Quicksand", sans-serif;
   --font_desktop_button_text: 700 1.5rem "Quicksand", sans-serif;
   --font_desktop_footer_text: 400 1rem "Quicksand", sans-serif;
+  --font_desktop_toast: 700 1.25rem "Quicksand", sans-serif;
 }
 
 * {

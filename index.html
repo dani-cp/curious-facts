@@ -6,11 +6,6 @@
     <title>Useless Utopia</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-        <style>
-        #home {
-            display: none;
-        }
-    </style>
 </head>
 <body>
   <header>
@@ -18,8 +13,8 @@
       Useless Utopia
     </h1>
 
-    <button id="button_favorites" class="heart_favorites_section">
-      <img src="./assets/logo.png" alt="heart logo" class="page_logo" />
+    <button id="button_favorites" class="favorites_section">
+      <iconify-icon icon="il:heart" class="favorites_heart"></iconify-icon>
     </button>
 
   </header>
@@ -30,23 +25,27 @@
         </em>
       </article>
       <div class="buttons_container">
-        <button id="button_new_fact" class="button">Next Fact <iconify-icon icon="cil:chevron-right"></iconify-icon></i></button>
-        <button id="button_add_favorite" class="button"> <p id="button_favorites_mobile_text"> + 1</p> <p id="button_favorites_desktop_text">Favorite</p></  iconify-icon><iconify-icon class="heart" icon="mdi:heart-outline"></iconify-icon>         
+        <button id="button_new_fact" class="button">Next Fact <iconify-icon icon="cil:chevron-right" class="icon"></iconify-icon></i></button>
+        <button id="button_add_favorite" class="button"> <p id="button_favorites_mobile_text"> + 1</p> <p id="button_favorites_desktop_text">Favorite</p></iconify-icon><iconify-icon icon="mdi:heart-outline" class="icon"></iconify-icon>         
         </button>
       </div>
     <div>
     </main>
-    
-    <div>
+    <div id="toast" class="toast hide"></div>
+    <section class="favorites">
       <ul id="list_favorites"></ul>
-      <button id="home">home</button>
-    </div>
+    
+      <div id="home">
+        <button id="button_home" class="button">home<iconify-icon icon="material-symbols:home-outline"
+            class="icon"></iconify-icon></button>
+      </div>
+    </section>
 
     <footer>
       <p>
         © Copyright 2023 Useless Utopia. All rights reserved
       </p>
     </footer>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>
