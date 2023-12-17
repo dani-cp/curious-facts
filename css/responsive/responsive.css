@@ -1,0 +1,82 @@
+@media (min-width: 900px) {
+    .header_nav {
+        height: 4.5rem;
+    }
+
+    .page_title {
+        font: var(--font_desktop_title_1);
+    }
+
+    .favorites_heart {
+        font-size: 3.5rem;
+    }
+
+    .main {
+        height: calc(100vh - 172px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        padding-left: 2rem;
+    }
+
+    .card_facts {
+        width: 75rem;
+        font: var(--font_desktop_fact_text);
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .buttons_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40rem;
+        gap: 1.5rem;
+    }
+
+    #button_new_fact,
+    #button_add_favorite,
+    #button_home {
+        width: 14rem;
+    }
+
+    #button_new_fact,
+    #button_add_favorite,
+    #button_home {
+        height: 4rem;
+        font: var(--font_desktop_button_text);
+        border: none;
+        justify-content: center;
+    }
+
+    #button_favorites_desktop_text {
+        display: flex;
+    }
+
+    #button_favorites_mobile_text {
+        display: none;
+    }
+
+    ul {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    li {
+        width: 35rem;
+        font: var(--font_desktop_fact_text);
+    }
+
+    footer {
+        height: 2.5rem;
+        justify-content: flex-end;
+    }
+
+    footer p {
+        margin-right: 2rem;
+        font: var(--font_desktop_footer_text);
+    }
+}

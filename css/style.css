@@ -1,7 +1,7 @@
 @import "./root.css";
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   height: 100%;
   background-color: var(--color_yellow);
@@ -10,38 +10,30 @@ body {
   background-repeat: repeat;
 }
 
-header {
+.header_nav {
   background-color: var(--color_light_blue);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1.5rem;
 }
 
 .page_title {
-  display: inline-flex;
-  margin-left: 1.5rem;
   font: var(--font_mobile_title_1);
   color: var(--color_dark_blue);
 }
 
-.favorites_section {
-  background-color: transparent;
-  border: none;
-  margin-right: 1.5rem;
-  display: flex;
-  align-items: center;
-
+a:hover,
+button:hover {
+  opacity: 0.8;
 }
 
 .favorites_heart {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color_pink);
-}
-
-.favorites_heart:hover {
-opacity: 0.8;
 }
 
 .main {
@@ -54,6 +46,7 @@ opacity: 0.8;
 }
 
 .card_facts {
+  margin-top: 5rem;
   border: .25rem solid var(--color_dark_blue);
   border-radius: .625rem;
   width: 19rem;
@@ -82,9 +75,7 @@ opacity: 0.8;
   justify-items: center;
   gap: 1rem;
 }
-.button:hover{
-opacity: 0.8;
-}
+
 #button_new_fact {
   background-color: var(--color_dark_blue);
   color: var(--color_cream);
@@ -132,11 +123,16 @@ opacity: 0.8;
 }
 
 .favorites {
-  margin-bottom: 3rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 5rem;
 }
 
 ul {
-  margin: 1rem 0;
+  margin: 3rem 0;
+  padding: 3rem;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -170,7 +166,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1rem auto;
 }
 
 footer {
@@ -192,13 +187,11 @@ footer p {
 
 @media (min-width: 900px) {
 
-  header {
+  .header_nav {
     height: 4.5rem;
   }
 
   .page_title {
-    width: auto;
-    padding-bottom: 0;
     font: var(--font_desktop_title_1);
   }
 
@@ -228,7 +221,6 @@ footer p {
     flex-direction: column;
     align-items: center;
     width: 40rem;
-    margin-top: -6rem;
     gap: 1.5rem;
   }
 
@@ -265,8 +257,8 @@ footer p {
     font: var(--font_desktop_fact_text);
   }
 
-  #button_home{
-  font: var(--font_desktop_button_text);
+  #button_home {
+    font: var(--font_desktop_button_text);
   }
 
   footer {

@@ -1,0 +1,19 @@
+.toast {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    width: max-content;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: var(--color_light_blue);
+    color: var(--color_dark_blue);
+    font: var(--font_mobile_toast);
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+}

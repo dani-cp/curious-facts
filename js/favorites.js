@@ -1,14 +1,5 @@
+import { show_toast } from './toast.js'
 let favorites = [];
-
-const show_toast = (message) => {
-  const toast = document.getElementById("toast");
-  toast.textContent = message;
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2000);
-};
 
 const load_favorites = () => {
   const stored_favorites = localStorage.getItem('favorites');
@@ -23,18 +14,14 @@ const save_favorites = () => {
 
 export const add_favorite = (fact) => {
   load_favorites();
-  if (!favorites.includes(fact)) {
-    favorites.push(fact);
-    save_favorites();
-    show_toast("Added to favorites.");
-    return true;
-  } else {
-    show_toast("This fact is already in favorites.");
-    return false;
-  }
+  return !favorites.includes(fact)
+    ? (favorites.push(fact), save_favorites(), show_toast("Added to favorites."), true)
+    : (show_toast("This fact is already in favorites."), false);
 };
 
 export const list_favorites = () => {
   load_favorites();
-  return favorites.length === 0 ? ["No favorites yet"] : favorites;
+  return favorites.length === 0
+    ? ["No favorites yet"]
+    : favorites;
 };

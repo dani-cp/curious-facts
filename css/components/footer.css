@@ -1,0 +1,15 @@
+footer {
+  background-color: var(--color_light_blue);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  margin: auto;
+  font: var(--font_mobile_footer_text);
+  color: var(--color_dark_blue);
+}

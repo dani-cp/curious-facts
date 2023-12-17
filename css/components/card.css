@@ -1,0 +1,12 @@
+.card_facts {
+  margin-top: 5rem;
+  border: .25rem solid var(--color_dark_blue);
+  border-radius: .625rem;
+  width: 19rem;
+  padding: 1.25rem;
+  background-color: var(--color_cream);
+  color: var(--color_dark_blue);
+  font: var(--font_mobile_fact_text);
+  line-height: 1.5;
+  text-align: center;
+}

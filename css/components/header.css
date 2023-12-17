@@ -1,0 +1,25 @@
+.header_nav {
+  background-color: var(--color_light_blue);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1.5rem;
+}
+
+.page_title {
+  font: var(--font_mobile_title_1);
+  color: var(--color_dark_blue);
+}
+
+.favorites_section {
+  display: flex;
+  align-items: center;
+}
+
+.favorites_heart {
+  font-size: 2.375rem;
+  color: var(--color_pink);
+}
