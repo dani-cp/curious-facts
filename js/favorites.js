@@ -3,9 +3,9 @@ let favorites = [];
 
 const load_favorites = () => {
   const stored_favorites = localStorage.getItem('favorites');
-  if (stored_favorites) {
-    favorites = JSON.parse(stored_favorites);
-  }
+  favorites = stored_favorites 
+  ? JSON.parse(stored_favorites) 
+  : [];
 };
 
 const save_favorites = () => {
