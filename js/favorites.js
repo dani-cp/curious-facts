@@ -21,7 +21,5 @@ export const add_favorite = (fact) => {
 
 export const list_favorites = () => {
   load_favorites();
-  return favorites.length === 0
-    ? ["No favorites yet"]
-    : favorites;
+  return favorites;
 };
